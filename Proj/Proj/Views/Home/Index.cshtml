@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Proj.Models.Patient>
+@{
+    //ViewData["Title"] = "Список ";
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Перечень</title>
+</head>
+<body>
+    <h3>Пациенты</h3>
+    <table>
+        @foreach (var pat in Model)
+        {
+        <tr>
+            <td>@pat.diagnosis </td>
+            <td>@pat.Man.Date </td>
+            <td>@pat.Man.Fio </td>
+
+        </tr>
+        }
+    </table>
+</body>
+</html>

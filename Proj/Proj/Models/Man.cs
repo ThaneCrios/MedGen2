@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 namespace Proj.Models
 {
     public class Man
-    {
+    { //Add-Migration Initial
+        //Update-Database
         public int Id { get; set; }
         public string Fio { get; set; }
         public DateTime Date { get; set; }

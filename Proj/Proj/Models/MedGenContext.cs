@@ -8,6 +8,7 @@ namespace Proj.Models
 {
     public class MedGenContext : DbContext
     { 
+        public DbSet<LivePlace> LivePlaces { get; set; } 
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Man> People { get; set; }
         public MedGenContext(DbContextOptions<MedGenContext> options)

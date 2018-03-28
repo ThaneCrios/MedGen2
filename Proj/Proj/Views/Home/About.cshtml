@@ -1,7 +1,23 @@
-﻿@{
-    ViewData["Title"] = "About";
+﻿@model IEnumerable<Proj.Models.Patient>
+@{
+    //ViewData["Title"] = "Список ";
+    Layout = null;
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+<!DOCTYPE html>
 
-<p>Use this area to provide additional information.</p>
+<html>
+<head>
+    <title>Перечень</title>
+</head>
+<body>
+    <h3>Пациенты</h3>
+    <table>
+        @foreach (var pat in Model)
+        {
+            <tr>
+                <td>@pat.diagnosis </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
